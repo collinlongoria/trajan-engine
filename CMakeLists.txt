@@ -39,11 +39,12 @@ add_executable(${PROJECT_NAME}
 
 target_include_directories(${PROJECT_NAME} PRIVATE src)
 target_include_directories(${PROJECT_NAME} PUBLIC include)
+target_include_directories(${PROJECT_NAME} PRIVATE external/opticus-rhi/include)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
         glfw
         glm::glm
         imgui
-        curia-ecs
-        opticus-rhi
+        curia_ecs
+        Opticus
 )
